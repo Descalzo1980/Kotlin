@@ -18,21 +18,15 @@ class MainActivity : AppCompatActivity() {
     var d:Long = 120 // 8 байт, числа уже ололо
     var f:Float = 120.8f // 4 байта -3.4*10 в 38 до 3.4*10 в 38 степени
     var g:Double = 120.5 // 8 байт 5.0 в 10 в 324 степени
+    var testBool: Boolean = true // это понятно
+    var test: Char = 'A' // это тоже понятно
+    var testString: String = "Привет как дела"
+
 
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         setContentView(R.layout.activity_main)
-        val counter = 0
-        val counter2 = counter + 5
-        val tvTest = findViewById<TextView>(R.id.tvTest)
-        tvTest.text = counter.toString()
-        var test1 = f.toInt()
-        var test2 = f.toString() // это классы
-
     }
 
-    fun onClickTest(view: View){
-
-    }
 }
