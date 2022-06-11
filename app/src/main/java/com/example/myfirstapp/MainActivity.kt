@@ -13,16 +13,28 @@ import com.example.myfirstapp.databinding.Test1Binding
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass : ActivityMainBinding
+    private val a = 324
+    private val b = 34
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+
+        bindingClass.btn1.setOnClickListener {
+            val result = (a + b).toString()
+            bindingClass.tvres.text = result
+        }
         bindingClass.btn2.setOnClickListener {
-            bindingClass.tv3.visibility = View.GONE
+
+            val result1 = a - b
+            bindingClass.tvres.text = "Результат вычитания равен: $result1"
+        }
+        bindingClass.btn3.setOnClickListener {
+            val result2 = a * b
+            bindingClass.tvres.text = "Результат умножения равен: $result2"
+        }
         }
 
         }
 
-
-    }
