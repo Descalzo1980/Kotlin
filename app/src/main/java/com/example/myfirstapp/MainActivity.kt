@@ -8,31 +8,21 @@ import android.util.LogPrinter
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import com.example.myfirstapp.databinding.ActivityMainBinding
+import com.example.myfirstapp.databinding.Test1Binding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var tv: TextView
-    lateinit var bt: Button
+    lateinit var bindingClass : ActivityMainBinding
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
-        setContentView(R.layout.activity_main)
-
-        //tv.text = "Некий текст" не запстить, экрана нет
-        //var tv = findViewById<TextView>(R.id.tvTest) разные варианты
-        //var tv = findViewById<TextView>(R.id.tvTest) as TextView разные варианты
-        //tv = findViewById<TextView>(R.id.tvTest) разные варианты
-        tv = findViewById(R.id.tvTest)
-        bt = findViewById(R.id.buttonTest)
-        bt.setOnClickListener {
-            tv.text = "Работает"
+        bindingClass = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(bindingClass.root)
+        bindingClass.btn2.setOnClickListener {
+            bindingClass.tv3.visibility = View.GONE
         }
+
+        }
+
+
     }
-
-    override fun onPause() {
-        super.onPause()
-        tv.text = "И вот опять"
-    }
-
-
-
-}
