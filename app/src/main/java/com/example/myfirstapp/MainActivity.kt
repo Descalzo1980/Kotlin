@@ -15,27 +15,39 @@ import kotlin.math.max
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding
-    private val maxPerson = 90
-    private val currentPerson = 87
 
     override fun onCreate(s: Bundle?) {
         super.onCreate(s)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
 
-        bindingClass.btn1.setOnClickListener {
-           when(currentPerson){
-               in 0..maxPerson -> bindingClass.tvres.text = "Всё хорошо"
-               else -> bindingClass.tvres.text = "Предел превышен"
+        bindingClass.btnResult.setOnClickListener {
 
-           }
-        }
-        bindingClass.btn2.setOnClickListener {
+            val resultValue = bindingClass.idValue.text.toString().toInt()
+            when(resultValue){
+                in 0..1000 -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    bindingClass.tvResult.text = "Нужно больше просмотров"
+                }
+                in 1001..100000 -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    bindingClass.tvResult.text = "Не плохо, не плохо"
+                }
 
-        }
-        bindingClass.btn3.setOnClickListener {
+                in 100001..1000000 -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    bindingClass.tvResult.text = "Ты супер звезда"
+                }
 
+                else -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    bindingClass.tvResult.text = "Нет слов)))"
+                }
+
+
+            }
         }
+
     }
 
 }

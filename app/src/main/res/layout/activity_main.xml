@@ -4,47 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
-
     <TextView
-        android:id="@+id/tvres"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="324 и 34"
+        android:layout_marginTop="164dp"
+        android:text="Введите количество ваших подписчиков:"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/idValue"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Сложить"
-        app:layout_constraintEnd_toEndOf="@+id/tvres"
-        app:layout_constraintStart_toStartOf="@+id/tvres"
-        app:layout_constraintTop_toBottomOf="@+id/tvres" />
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="количество подписчиков"
+        android:inputType="number|textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#84EC0E"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/idValue"
+        app:layout_constraintStart_toStartOf="@+id/idValue"
+        app:layout_constraintTop_toBottomOf="@+id/idValue" />
 
     <Button
-        android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnResult"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Отнять"
-        app:layout_constraintEnd_toEndOf="@+id/btn1"
-        app:layout_constraintStart_toStartOf="@+id/btn1"
-        app:layout_constraintTop_toBottomOf="@+id/btn1" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Ужножить"
-        app:layout_constraintEnd_toEndOf="@+id/btn2"
-        app:layout_constraintStart_toStartOf="@+id/btn2"
-        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="Узнать результат"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/idValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        app:layout_constraintVertical_bias="0.018" />
 </androidx.constraintlayout.widget.ConstraintLayout>
