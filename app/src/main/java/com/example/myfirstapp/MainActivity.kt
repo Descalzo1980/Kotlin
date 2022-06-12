@@ -1,17 +1,12 @@
 package com.example.myfirstapp
 
-import android.graphics.Color
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
-import android.util.LogPrinter
 import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import com.example.myfirstapp.constance.Constance
 import com.example.myfirstapp.databinding.ActivityMainBinding
-import com.example.myfirstapp.databinding.Test1Binding
-import kotlin.math.max
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding
@@ -23,32 +18,45 @@ class MainActivity : AppCompatActivity() {
 
         bindingClass.btnResult.setOnClickListener {
 
-            val resultValue = bindingClass.idValue.text.toString().toInt()
-            when(resultValue){
-                in 0..1000 -> {
+            when (bindingClass.idValue.text.toString()) {
+                Constance.Account -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    bindingClass.tvResult.text = "Нужно больше просмотров"
-                }
-                in 1001..100000 -> {
-                    bindingClass.tvResult.visibility = View.VISIBLE
-                    bindingClass.tvResult.text = "Не плохо, не плохо"
-                }
+                    val tempText = "Получите вашу зарплату ${Constance.Account_Salary}"
+                    bindingClass.tvResult.text = if (bindingClass.passView.text.toString() == Constance.Account_Password) {
+                        tempText
+                    } else {
+                        "Не верный пароль"
+                    }
 
-                in 100001..1000000 -> {
-                    bindingClass.tvResult.visibility = View.VISIBLE
-                    bindingClass.tvResult.text = "Ты супер звезда"
                 }
-
+                Constance.Writer -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    val tempText = "Получите вашу зарплату ${Constance.Writer_Salary}"
+                    bindingClass.tvResult.text = if (bindingClass.passView.text.toString() == Constance.Writer_Password) {
+                        tempText
+                    } else {
+                        "Не верный пароль"
+                    }
+                }
+                Constance.Duck -> {
+                    bindingClass.tvResult.visibility = View.VISIBLE
+                    val tempText = "Получите вашу зарплату ${Constance.Duck_Salary}"
+                    bindingClass.tvResult.text = if (bindingClass.passView.text.toString() == Constance.Duck_Password) {
+                        tempText
+                    } else {
+                        "Не верный пароль"
+                    }
+                }
                 else -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    bindingClass.tvResult.text = "Нет слов)))"
+                    bindingClass.tvResult.text = "Нет такого работника)))"
                 }
 
 
             }
         }
-
     }
-
 }
+
+
 
