@@ -2,4 +2,5 @@
     <string name="app_name">MyFirstApp</string>
     <string name="Hello">Hello</string>
     <string name="Ok" translatable="false">Ok</string>
+    <string name="Button">Button</string>
 </resources>
