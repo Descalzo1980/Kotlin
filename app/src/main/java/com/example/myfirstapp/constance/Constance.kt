@@ -10,6 +10,6 @@ object Constance {
     const val Duck = "Сергей"
 
     const val Account_Password = "1234"
-    val Writer_Password = "6589"
+    const val Writer_Password = "6589"
     const val Duck_Password = "2258"
 }
