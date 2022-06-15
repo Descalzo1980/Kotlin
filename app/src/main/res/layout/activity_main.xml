@@ -2,31 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvMessageMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Базовое активити"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="144dp"
+        android:text="Главное Активити"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.369" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/tvMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="119dp"
-        android:onClick="onClickGoTest2"
-        android:text="Test Activity2"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        android:layout_marginTop="228dp"
+        android:onClick="onClickTest1"
+        android:text="Test Activity1"
+        app:layout_constraintEnd_toEndOf="@+id/tvMessageMain"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/tvMessageMain"
+        app:layout_constraintTop_toTopOf="@+id/tvMessageMain" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
