@@ -2,34 +2,57 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/testView"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvMessageMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="Главное Активити"
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="324dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="192dp"
+        android:text="@string/sing_up"
+        android:onClick="onClickSingUp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/tvMessage"
+        android:id="@+id/eBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="@string/sing_in"
+        android:onClick="onClickSingIn"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/tvInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="228dp"
-        android:onClick="onClickTest1"
-        android:text="Test Activity1"
-        app:layout_constraintEnd_toEndOf="@+id/tvMessageMain"
-        app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="@+id/tvMessageMain"
-        app:layout_constraintTop_toTopOf="@+id/tvMessageMain" />
+        android:layout_marginBottom="28dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/eBtn"
+        app:layout_constraintEnd_toEndOf="@+id/eBtn"
+        app:layout_constraintStart_toStartOf="@+id/eBtn" />
 
+    <ImageView
+        android:id="@+id/imAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvInfo"
+        app:layout_constraintEnd_toEndOf="@+id/eBtn"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/eBtn"
+        app:srcCompat="@drawable/girl" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

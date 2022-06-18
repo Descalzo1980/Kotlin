@@ -3,4 +3,18 @@
     <string name="Hello">Hello</string>
     <string name="Ok" translatable="false">Ok</string>
     <string name="Button">Button</string>
+    <string name="sing_in" translatable="false">Sing In</string>
+    <string name="sing_up" translatable="false">Sing Up</string>
+    <string name="avatar" translatable="false">Avatar</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="name" translatable="false">Имя</string>
+    <string name="second_name" translatable="false">Фамилия</string>
+    <string name="last_name" translatable="false">Отчество</string>
+    <string name="ready" translatable="false">Готово</string>
+    <string name="hint_login" translatable="false">Введите Login</string>
+    <string name="hint_password" translatable="false">Введите Password</string>
+    <string name="hint_name" translatable="false">Введите Имя</string>
+    <string name="hint_second_name" translatable="false">Введите Фамилия</string>
+    <string name="hint_last_name" translatable="false">Введите Отчество</string>
 </resources>
