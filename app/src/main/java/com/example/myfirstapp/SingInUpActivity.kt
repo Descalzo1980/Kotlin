@@ -15,8 +15,5 @@ class TestActivity1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bindingClass = ActivityTest1Binding.inflate(layoutInflater)
         setContentView(bindingClass.root)
-        val message = intent.getStringExtra("key")
-        bindingClass.tvMessage.text = message
-
     }
 }
